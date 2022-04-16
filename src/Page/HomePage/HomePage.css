@@ -1,0 +1,25 @@
+.bg-home-image {
+  /* background-image: "../../images/bg-home-img.jpg"; */
+  background: linear-gradient(260deg, #38247600 0%, #2c2149) 100%,
+    url("../../images//bg-home-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  /* height: 5vh; */
+  /* position: relative; */
+  /* background-attachment: fixed; */
+}
+.home-title {
+  font-size: 63px;
+}
+.text-orange {
+  color: rgb(255, 106, 0);
+  font-size: 18px;
+}
+/* .button-orange {
+  background-color: rgb(255, 106, 0);
+  background: red;
+} */
+.orange-btn button {
+  background: rgb(255, 106, 0);
+}
