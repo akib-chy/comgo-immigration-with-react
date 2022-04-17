@@ -3,6 +3,7 @@ import AboutHomePage from "./AboutHomePage/AboutHomePage";
 import "./HomePage.css";
 import VisaHomePage from "./VisaHomePage/VisaHomePage";
 import WorkHomePage from "./WorkHomePage/WorkHomePage";
+import CountryVisa from "./CountryVisa/CountryVisa";
 
 const HomePage = () => {
   return (
@@ -29,7 +30,7 @@ const HomePage = () => {
               </p>
             </div>
             <div className="orange-btn mt-5">
-              <button className="btn orange-btn p-3 px-4 text-light shadow-none fw-bold">
+              <button className="btn  p-3 px-4 text-light shadow-none fw-bold">
                 Discoverd More
               </button>
             </div>
@@ -39,6 +40,7 @@ const HomePage = () => {
       <AboutHomePage />
       <WorkHomePage />
       <VisaHomePage />
+      <CountryVisa />
     </div>
   );
 };

@@ -11,7 +11,7 @@ const VisaHomePage = () => {
   }, []);
 
   return (
-    <div className="mt-5 pt-5 visa-container">
+    <div className="mt-5 pt-5 visa-container mb-5 pb-5">
       <div className="container ">
         <div className="text-center ">
           <p className="text-orange">HOW WE WORK</p>

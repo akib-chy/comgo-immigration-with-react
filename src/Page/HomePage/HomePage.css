@@ -19,7 +19,7 @@
   transition: all ease-in 0.2s;
 }
 .orange-btn button:hover {
-  background: #2c2149;
+  background: #2c2149da;
   transform: translateY(-7px);
 }
 
