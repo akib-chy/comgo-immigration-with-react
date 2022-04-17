@@ -7,7 +7,7 @@ const AboutHomePage = () => {
   return (
     <div className="container mt-5 pt-3">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-12 col-lg-6">
           <p className="text-orange ">ABOUT US</p>
           <h1 className="fw-bold about-title mb-4">
             We Provide Solution To All Migration & Visa Matters
@@ -54,7 +54,7 @@ const AboutHomePage = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-12 col-lg-6">
           <div className="mb-4">
             <img className="img-fluid rounded-3" src={aboutImg1} alt="" />
           </div>
