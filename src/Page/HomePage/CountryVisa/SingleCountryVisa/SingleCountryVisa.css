@@ -1,0 +1,20 @@
+.countryVisa-info-title h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #392476;
+  font-size: 33px;
+  margin-top: 25px;
+}
+.countryVisa-info-title p {
+  color: #7a7a7ad9;
+}
+.country-book-btn button {
+  background-color: rgb(255, 106, 0);
+  color: #fff;
+  margin-top: 20px;
+  transition: all ease-in 0.2s;
+}
+.country-book-btn button:hover {
+  color: #fff;
+  transform: translateY(-7px);
+}

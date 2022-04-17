@@ -33,7 +33,7 @@ const CountryVisa = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-5 pt-2">
           {countryesVisa?.map((countryVisa) => (
             <SingleCountryVisa key={countryVisa.id} countryVisa={countryVisa} />
           ))}
