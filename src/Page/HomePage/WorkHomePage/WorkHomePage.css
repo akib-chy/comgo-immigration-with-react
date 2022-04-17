@@ -2,6 +2,9 @@
   font-size: 52px;
   color: #392476;
 }
+.work-info {
+  margin-top: 70px;
+}
 .work-right-icon {
   font-size: 34px;
   margin-left: 40px;
@@ -24,4 +27,16 @@
 .workAbout-info p {
   color: #7a7a7ae0;
   margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 578px) {
+  .workHome-title {
+    font-size: 32px;
+  }
+  .work-info {
+    margin-top: 30px;
+  }
+  .info {
+    margin-top: 50px;
+  }
 }
