@@ -4,13 +4,21 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const [validated, setValidated] = useState(false);
+  const [siteError, setSiteError] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    if (!email && !password) {
+      setSiteError("Please Fill In The Input Field");
+      return;
+    }
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+      return;
     }
 
     setValidated(true);
@@ -46,6 +54,7 @@ const Login = () => {
               Please provide a valid Password.
             </Form.Control.Feedback>
           </Form.Group>
+          <p className="text-danger fw-bold">{siteError}</p>
           <p className="text-center">
             Already have an account ?{" "}
             <Link className="text-decoration-none text-warning" to="/signUp">
