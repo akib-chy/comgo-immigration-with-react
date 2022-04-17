@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const SignUp = () => {
   const [validated, setValidated] = useState(false);
   const [siteError, setSiteError] = useState("");
   const [pass, setPass] = useState("");
   const [confPass, setConfPass] = useState("");
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile] = useUpdateProfile(auth);
   const handlePassBlur = (event) => {
     setPass(event.target.value);
   };
@@ -14,16 +22,13 @@ const SignUp = () => {
     setConfPass(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
 
     if (!name || !email || !pass || !confPass) {
       setSiteError("Please Fill In The Input Field");
-    }
-    if (pass !== confPass) {
-      setSiteError("opps Password Not Match");
       return;
     }
 
@@ -33,9 +38,16 @@ const SignUp = () => {
       event.stopPropagation();
       return;
     }
+    if (pass !== confPass) {
+      setSiteError("opps Password Not Match");
+      return;
+    }
+    await createUserWithEmailAndPassword(email, pass);
+    await updateProfile({ displayName: name });
     setSiteError("");
     setValidated(true);
   };
+  console.log(user);
   return (
     <div className="container">
       <div className="shadow w-50 mx-auto p-5 my-5">
@@ -92,6 +104,7 @@ const SignUp = () => {
             </Form.Control.Feedback>
           </Form.Group>
           <p className="text-danger fw-bold">{siteError}</p>
+          <p className="text-danger fw-bold">{error?.message}</p>
           <p className="text-center">
             New to Combo | Immigration ?{" "}
             <Link className="text-decoration-none text-warning" to="/login">
