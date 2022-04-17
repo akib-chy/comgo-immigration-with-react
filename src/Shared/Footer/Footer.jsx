@@ -16,16 +16,16 @@ const Footer = () => {
             </p>
             <p>ullamcorper odio vitae eleifend ultricies lectus</p>
             <div className="footer-icons mt-5 ">
-              <a href="#">
+              <a href="/#">
                 <i className="fa-brands fa-facebook"></i>
               </a>
-              <a href="#">
+              <a href="/#">
                 <i className="fa-brands fa-twitter"></i>
               </a>
-              <a href="#">
+              <a href="/#">
                 <i className="fa-brands fa-youtube"></i>
               </a>
-              <a href="#">
+              <a href="/#">
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
@@ -38,31 +38,31 @@ const Footer = () => {
           <div className="col-lg-2 mt-5">
             <h4 className="text-light fw-bold">Services</h4>
             <div className="mt-3">
-              <a href="#">Worker Visa</a>
+              <a href="/#">Worker Visa</a>
             </div>
             <div className="mt-3">
-              <a href="#">Worker Visa</a>
+              <a href="/#">Worker Visa</a>
             </div>
             <div className="mt-3">
-              <a href="#">Worker Visa</a>
+              <a href="/#">Worker Visa</a>
             </div>
             <div className="mt-3">
-              <a href="#">Worker Visa</a>
+              <a href="/#">Worker Visa</a>
             </div>
           </div>
           <div className="col-lg-3 mt-5">
             <h4 className="text-light fw-bold">Important Links</h4>
             <div className="mt-3">
-              <a href="#">About</a>
+              <a href="/#">About</a>
             </div>
             <div className="mt-3">
-              <a href="#">Coaching</a>
+              <a href="/#">Coaching</a>
             </div>
             <div className="mt-3">
-              <a href="#">Visa</a>
+              <a href="/#">Visa</a>
             </div>
             <div className="mt-3">
-              <a href="#">Pricing</a>
+              <a href="/#">Pricing</a>
             </div>
           </div>
           <div className="col-lg-3 mt-5">
@@ -81,9 +81,9 @@ const Footer = () => {
             </div>
             <div className="text-light d-flex align-items-center">
               <span>
-                <i className="fa-solid fa-location-dot"></i>
+                <i className="fa-solid fa-envelope"></i>
               </span>
-              <p>tokomoo@example.com</p>
+              <p>comgo@example.com</p>
             </div>
           </div>
           <div className="col-lg-4 mt-5">
@@ -103,7 +103,7 @@ const Footer = () => {
       </div>
       <p className="text-center  mt-5 mb-0 pb-4 footer-copyright ">
         Copyright &copy; {year} Combo Immigration | Designg-By :{" "}
-        <a href="#" target="_blank">
+        <a href="https://www.facebook.com/Minhajul69" target="_blank">
           AKIB
         </a>
       </p>
