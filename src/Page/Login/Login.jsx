@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 import { sendPasswordResetEmail } from "firebase/auth";
 import googleLogo from "../../images/google.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [validated, setValidated] = useState(false);
@@ -44,7 +46,18 @@ const Login = () => {
     }
     sendPasswordResetEmail(auth, email)
       .then(() => {
-        console.log("email sent");
+        toast.success(
+          "Password Resat Email SuccessFully sent. Check Your Email",
+          {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          }
+        );
       })
       .catch((error) => {
         setSiteError(error?.message);
@@ -88,15 +101,24 @@ const Login = () => {
           </Form.Group>
           <p className="text-danger fw-bold">{siteError}</p>
           <p className="text-danger fw-bold">{error?.message}</p>
-          <p className="text-danger fw-bold">
-            {googleError === false ? "Google Login Faild Please Try Again" : ""}
-          </p>
+          <p className="text-danger fw-bold">{googleError}</p>
           <button
             onClick={handlePasswordResat}
             className="btn btn-link shadow-none"
           >
             Resat Password ?
           </button>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
           <p className="text-center">
             Already have an account ?{" "}
             <Link className="text-decoration-none text-warning" to="/signUp">

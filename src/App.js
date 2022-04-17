@@ -8,6 +8,7 @@ import About from "./Page/About/About";
 import Blogs from "./Page/Blogs/Blogs";
 import Login from "./Page/Login/Login";
 import SignUp from "./Page/SignUp/SignUp";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
