@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Worker Visa",
+    "description": "We use some essential cookies to make this website work.We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.",
+    "img": "./images/Icon-Line-Expand_1.png"
+  },
+  {
+    "id": 2,
+    "name": "Business Visa",
+    "description": "A Business visa may be issued for maximum 1 (one) year with single, double or multiple entries. Please note that duration of stay for each visit should be maximum 60 days.",
+    "img": "./images/Icon-Line-Expand_2.png"
+  },
+  {
+    "id": 3,
+    "name": "Student Visa",
+    "description": "A Student visa may be issued for maximum one (01) year with multiple entries. Duration of stay in this category is as required in each visit.",
+    "img": "./images/Icon-Line-Expand_3.png"
+  },
+  {
+    "id": 4,
+    "name": "Family Visa",
+    "description": "A family visa may be issued for maximum three (03) months with single, double or multiple entries and is non-extendable and non-convertible. Duration of stay in this category is maximum 90 days in each visit.",
+    "img": "./images/Icon-Line-Expand_4.png"
+  },
+  {
+    "id": 5,
+    "name": "Diplomatic Visa",
+    "description": "Diplomatic/other Embassy officials visa may be issued for as required with single, double or multiple entries. Duration of stay in this category of visa is also as required in each visit.",
+    "img": "./images/Icon-Line-Expand_5.png"
+  },
+  {
+    "id": 6,
+    "name": "Tourist Visa",
+    "description": "A foreigner who wants to visit Bangladesh for the purpose of tourism or casual visit to meet friends & relatives or to join in a seminar/conference/workshop/study tour or religious purpose etc, they are eligible to apply for tourist visa. Except the mentioned purposes of the application, no other activity is permissible on a tourist visa.",
+    "img": "./images/Icon-Line-Expand_6.png"
+  }
+]

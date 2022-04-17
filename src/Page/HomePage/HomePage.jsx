@@ -1,6 +1,7 @@
 import React from "react";
 import AboutHomePage from "./AboutHomePage/AboutHomePage";
 import "./HomePage.css";
+import VisaHomePage from "./VisaHomePage/VisaHomePage";
 import WorkHomePage from "./WorkHomePage/WorkHomePage";
 
 const HomePage = () => {
@@ -37,6 +38,7 @@ const HomePage = () => {
       </div>
       <AboutHomePage />
       <WorkHomePage />
+      <VisaHomePage />
     </div>
   );
 };
