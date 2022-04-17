@@ -9,7 +9,7 @@ const VisaHomePage = () => {
       .then((res) => res.json())
       .then((data) => setAllVisa(data));
   }, []);
-  console.log(allVisa);
+
   return (
     <div className="mt-5 pt-5 visa-container">
       <div className="container ">

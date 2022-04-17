@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "img": "./images/village1.jpg",
+    "name": "Indonesia",
+    "price": 267,
+    "description": "The Indonesian archipelago has been a valuable region for trade since at least the 7th century when Srivijaya and later Majapahit traded with entities from mainland China and the Indian subcontinent. Local rulers gradually absorbed foreign influences from the early"
+  },
+  {
+    "id": 2,
+    "img": "./images/village2.jpg",
+    "name": "South Korea",
+    "price": 351,
+    "description": "South Korea is a developed country and is ranked as the seventh-highest country on the Human Development Index (HDI) in the Asia and Oceania region. South Korea has one of the highest life expectancies in the world, although it is facing an aging population and"
+  },
+  {
+    "id": 3,
+    "img": "./images/village3.jpg",
+    "name": "Japan",
+    "price": 186,
+    "description": "Japan has been inhabited since the Upper Paleolithic period (30,000 BC), though the first written mention of the archipelago appears in a Chinese chronicle (the Book of Han) finished in the 2nd century AD. Between the 4th and 9th centuries, the kingdoms"
+  },
+  {
+    "id": 4,
+    "img": "./images/village4.jpg",
+    "name": "Australia",
+    "price": 237,
+    "description": "Australia is a highly developed country with a high-income economy; it has the world's thirteenth-largest economy, tenth-highest per capita income and eighth-highest Human Development Australia is a regional power, and has the world's thirteenth"
+  },
+  {
+    "id": 5,
+    "img": "./images/village5.jpg",
+    "name": "Malaysia",
+    "price": 309,
+    "description": "Malaysia has its origins in the Malay kingdoms which, from the 18th century, became subject to the British Empire, along with the British Straits Settlements protectorate. Peninsular Malaysia was unified as the Malayan Union in 1946. Malaya was restructured as the"
+  },
+  {
+    "id": 6,
+    "img": "./images/village6.jpg",
+    "name": "Singapore",
+    "price": 294,
+    "description": "Singapore is a unitary parliamentary republic with a Westminster system of unicameral parliamentary government. While elections are considered generally free, the government exercises significant control over politics and society, and the People's Action Party has rule"
+  }
+]

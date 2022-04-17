@@ -4,7 +4,7 @@ import "./SingleVisa.css";
 const SingleVisa = ({ visa }) => {
   const { name, img, description } = visa;
   return (
-    <div className="col-md-4 text-center mt-5 pt-3">
+    <div className="col-lg-4 col-md-6 col-sm-12 text-center mt-5 pt-3">
       <img className="img-fluid" src={img} alt="" />
       <div className="text-light mt-3">
         <h3 className="fw-bold mb-4 mt-4">{name}</h3>
