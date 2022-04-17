@@ -15,6 +15,12 @@
 
 .orange-btn button {
   background: rgb(255, 106, 0);
+  border-radius: 10px;
+  transition: all ease-in 0.2s;
+}
+.orange-btn button:hover {
+  background: #2c2149;
+  transform: translateY(-7px);
 }
 
 @media only screen and (max-width: 578px) {
