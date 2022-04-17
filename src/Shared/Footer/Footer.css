@@ -41,3 +41,16 @@
   color: #fff;
   background-color: #39217e;
 }
+.footer-copyright {
+  color: rgba(211, 211, 211, 0.73);
+  font-size: 14px;
+}
+.footer-copyright a {
+  text-decoration: none;
+  color: rgb(255, 106, 0);
+}
+@media only screen and (max-width: 578px) {
+  footer {
+    text-align: center;
+  }
+}

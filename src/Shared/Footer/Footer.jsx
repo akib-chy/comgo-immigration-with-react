@@ -3,8 +3,10 @@ import "./Footer.css";
 import logo from "../../images/Logo-Comgo.png";
 
 const Footer = () => {
+  const time = new Date();
+  const year = time.getFullYear();
   return (
-    <footer className="footer-section pt-5 pb-5">
+    <footer className="footer-section pt-5 ">
       <div className="container  pt-5  pb-5">
         <div className="text-center">
           <img className="img-fluid" src={logo} alt="" />
@@ -33,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="row footer-info">
-          <div className="col-lg-2">
+          <div className="col-lg-2 mt-5">
             <h4 className="text-light fw-bold">Services</h4>
             <div className="mt-3">
               <a href="#">Worker Visa</a>
@@ -48,7 +50,7 @@ const Footer = () => {
               <a href="#">Worker Visa</a>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 mt-5">
             <h4 className="text-light fw-bold">Important Links</h4>
             <div className="mt-3">
               <a href="#">About</a>
@@ -63,7 +65,7 @@ const Footer = () => {
               <a href="#">Pricing</a>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 mt-5">
             <h4 className="text-light fw-bold">Contact</h4>
             <div className="text-light d-flex align-items-center">
               <span>
@@ -84,7 +86,7 @@ const Footer = () => {
               <p>tokomoo@example.com</p>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 mt-5">
             <h4 className="text-light fw-bold">Subscribe Our Newslatter</h4>
             <div>
               <p className="mb-1">Lorem ipsum dolor sit amet,</p>
@@ -99,6 +101,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <p className="text-center  mt-5 mb-0 pb-4 footer-copyright ">
+        Copyright &copy; {year} Combo Immigration | Designg-By :{" "}
+        <a href="#" target="_blank">
+          AKIB
+        </a>
+      </p>
     </footer>
   );
 };
