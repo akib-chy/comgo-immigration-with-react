@@ -10,7 +10,7 @@ const CountryVisa = () => {
       .then((data) => setCountryesVisa(data));
   }, []);
   return (
-    <div className="mt-5 pt-5">
+    <div className="mt-5 pt-5 mb-5 pb-5">
       <div className="container">
         <div className="row">
           <div className="col-md-9">

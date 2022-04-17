@@ -4,6 +4,7 @@ import "./HomePage.css";
 import VisaHomePage from "./VisaHomePage/VisaHomePage";
 import WorkHomePage from "./WorkHomePage/WorkHomePage";
 import CountryVisa from "./CountryVisa/CountryVisa";
+import GetInTouchHomePage from "./GetInTouchHomePage/GetInTouchHomePage";
 
 const HomePage = () => {
   return (
@@ -41,6 +42,7 @@ const HomePage = () => {
       <WorkHomePage />
       <VisaHomePage />
       <CountryVisa />
+      <GetInTouchHomePage />
     </div>
   );
 };
