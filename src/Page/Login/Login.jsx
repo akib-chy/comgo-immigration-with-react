@@ -1,14 +1,28 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
+import { sendPasswordResetEmail } from "firebase/auth";
+import googleLogo from "../../images/google.svg";
 
 const Login = () => {
   const [validated, setValidated] = useState(false);
-  const [siteError, setSiteError] = useState();
-
+  const [siteError, setSiteError] = useState("");
+  const [email, setEmail] = useState("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
+  const handleEmailBlur = (e) => {
+    setEmail(e.target.value);
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
+    // const email = event.target.email.value;
     const password = event.target.password.value;
     if (!email && !password) {
       setSiteError("Please Fill In The Input Field");
@@ -20,9 +34,26 @@ const Login = () => {
       event.stopPropagation();
       return;
     }
-
+    signInWithEmailAndPassword(email, password);
     setValidated(true);
   };
+  const handlePasswordResat = (e) => {
+    if (!email) {
+      setSiteError("Please Enter Your Email");
+      return;
+    }
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        console.log("email sent");
+      })
+      .catch((error) => {
+        setSiteError(error?.message);
+      });
+  };
+  const handleGoogleLogin = () => {
+    signInWithGoogle();
+  };
+  console.log(googleError.message);
   return (
     <div className="container">
       <div className="shadow w-50 mx-auto p-5 my-5">
@@ -36,6 +67,7 @@ const Login = () => {
               placeholder="Enter email"
               name="email"
               required
+              onBlur={handleEmailBlur}
             />
             <Form.Control.Feedback type="invalid">
               Please provide a valid Email.
@@ -55,6 +87,16 @@ const Login = () => {
             </Form.Control.Feedback>
           </Form.Group>
           <p className="text-danger fw-bold">{siteError}</p>
+          <p className="text-danger fw-bold">{error?.message}</p>
+          <p className="text-danger fw-bold">
+            {googleError === false ? "Google Login Faild Please Try Again" : ""}
+          </p>
+          <button
+            onClick={handlePasswordResat}
+            className="btn btn-link shadow-none"
+          >
+            Resat Password ?
+          </button>
           <p className="text-center">
             Already have an account ?{" "}
             <Link className="text-decoration-none text-warning" to="/signUp">
@@ -62,11 +104,19 @@ const Login = () => {
             </Link>
           </p>
           <Button
-            className="shadow-none w-100 "
+            className="shadow-none w-100 py-2"
             variant="primary"
             type="submit"
           >
             Login
+          </Button>
+          <Button
+            onClick={handleGoogleLogin}
+            className="text-dark shadow-none w-100 mt-3 bg-transparent py-2"
+            type="button"
+          >
+            <img className="img-fluid me-2" src={googleLogo} alt="" />
+            Continue With Google
           </Button>
         </Form>
       </div>

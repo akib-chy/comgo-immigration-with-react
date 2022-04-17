@@ -3,9 +3,11 @@ import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
   useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import googleLogo from "../../images/google.svg";
 
 const SignUp = () => {
   const [validated, setValidated] = useState(false);
@@ -13,8 +15,10 @@ const SignUp = () => {
   const [pass, setPass] = useState("");
   const [confPass, setConfPass] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile] = useUpdateProfile(auth);
+  const [signInWithGoogle, googleLoading, googleError] =
+    useSignInWithGoogle(auth);
   const handlePassBlur = (event) => {
     setPass(event.target.value);
   };
@@ -47,11 +51,15 @@ const SignUp = () => {
     setSiteError("");
     setValidated(true);
   };
-  console.log(user);
+  const handleGoogleLogin = () => {
+    signInWithGoogle();
+  };
   return (
     <div className="container">
       <div className="shadow w-50 mx-auto p-5 my-5">
-        <h3 className="text-primary text-center fw-bold mb-3">Please Login</h3>
+        <h3 className="text-primary text-center fw-bold mb-3">
+          Please Sign Up
+        </h3>
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicName">
             <Form.Label>Name</Form.Label>
@@ -105,14 +113,27 @@ const SignUp = () => {
           </Form.Group>
           <p className="text-danger fw-bold">{siteError}</p>
           <p className="text-danger fw-bold">{error?.message}</p>
+          <p className="text-danger fw-bold">{googleError?.message}</p>
           <p className="text-center">
             New to Combo | Immigration ?{" "}
             <Link className="text-decoration-none text-warning" to="/login">
               Login
             </Link>
           </p>
-          <Button className="shadow-none w-100" variant="primary" type="submit">
+          <Button
+            className="shadow-none w-100 py-2"
+            variant="primary"
+            type="submit"
+          >
             Sign Up
+          </Button>
+          <Button
+            onClick={handleGoogleLogin}
+            className="text-dark shadow-none w-100 mt-3 bg-transparent py-2"
+            type="button"
+          >
+            <img className="img-fluid me-2" src={googleLogo} alt="" />
+            Continue With Google
           </Button>
         </Form>
       </div>

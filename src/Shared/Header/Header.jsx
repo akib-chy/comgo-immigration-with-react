@@ -1,11 +1,18 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 import logo from "../../images/Logo-Comgo.png";
 import CustomLink from "../CustomLink/CustomLink";
 import "./Header.css";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user, loading, error] = useAuthState(auth);
+  const handleLogOut = () => {
+    signOut(auth);
+  };
   return (
     <Navbar
       collapseOnSelect
@@ -33,8 +40,21 @@ const Header = () => {
             <Nav.Link as={CustomLink} to="/blogs">
               Blogs
             </Nav.Link>
-            <Nav.Link as={CustomLink} to="/login">
-              Login
+            {user ? (
+              <button
+                onClick={handleLogOut}
+                className="btn btn-link text-decoration-none shadow-none text-warning fw-bold"
+              >
+                Log Out
+              </button>
+            ) : (
+              <Nav.Link as={CustomLink} to="/login">
+                LogIn
+              </Nav.Link>
+            )}
+
+            <Nav.Link as={CustomLink} to="/signUp">
+              SignUp
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
