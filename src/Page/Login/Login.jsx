@@ -16,7 +16,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [validated, setValidated] = useState(false);
-  const [siteError, setSiteError] = useState("");
   const [email, setEmail] = useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
@@ -34,12 +33,13 @@ const Login = () => {
   if (user || googleUsers) {
     navigate(from, { replace: true });
   }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     // const email = event.target.email.value;
     const password = event.target.password.value;
     if (!email && !password) {
-      setSiteError("Please Fill In The Input Field");
+      toast.error("Please Fill In The Input Field");
       return;
     }
     const form = event.currentTarget;
@@ -53,26 +53,17 @@ const Login = () => {
   };
   const handlePasswordResat = (e) => {
     if (!email) {
-      setSiteError("Please Enter Your Email");
+      toast.error("Please Enter Your Email");
       return;
     }
     sendPasswordResetEmail(auth, email)
       .then(() => {
         toast.success(
-          "Password Resat Email SuccessFully sent. Check Your Email",
-          {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          }
+          "Password Resat Email SuccessFully sent. Check Your Email"
         );
       })
       .catch((error) => {
-        setSiteError(error?.message);
+        toast.error(error?.message);
       });
   };
   const handleGoogleLogin = () => {
@@ -110,7 +101,6 @@ const Login = () => {
               Please provide a valid Password.
             </Form.Control.Feedback>
           </Form.Group>
-          <p className="text-danger fw-bold">{siteError}</p>
           <p className="text-danger fw-bold">{error?.message}</p>
           <p className="text-danger fw-bold">{googleError?.message}</p>
           <button
@@ -119,17 +109,7 @@ const Login = () => {
           >
             Resat Password ?
           </button>
-          <ToastContainer
-            position="top-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
+          <ToastContainer position="top-center" />
           <p className="text-center">
             Already have an account ?{" "}
             <Link className="text-decoration-none text-warning" to="/signUp">

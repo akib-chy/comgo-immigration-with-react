@@ -9,10 +9,11 @@ import {
 import auth from "../../firebase.init";
 import googleLogo from "../../images/google.svg";
 import Spiner from "../../Shared/Spiner/Spiner";
+import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
   const [validated, setValidated] = useState(false);
-  const [siteError, setSiteError] = useState("");
+
   const [pass, setPass] = useState("");
   const [confPass, setConfPass] = useState("");
   const navigate = useNavigate();
@@ -32,7 +33,10 @@ const SignUp = () => {
     return <Spiner />;
   }
   if (user || googleUser) {
-    navigate("/home");
+    toast.success("User Creat SuccessFull");
+    setTimeout(() => {
+      navigate("/home");
+    }, 2000);
   }
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -40,7 +44,7 @@ const SignUp = () => {
     const email = event.target.email.value;
 
     if (!name || !email || !pass || !confPass) {
-      setSiteError("Please Fill In The Input Field");
+      toast.error("Please Fill In The Input Field");
       return;
     }
 
@@ -51,12 +55,12 @@ const SignUp = () => {
       return;
     }
     if (pass !== confPass) {
-      setSiteError("opps Password Not Match");
+      toast.error("opps Password Not Match");
       return;
     }
     await createUserWithEmailAndPassword(email, pass);
     await updateProfile({ displayName: name });
-    setSiteError("");
+
     setValidated(true);
   };
   const handleGoogleLogin = () => {
@@ -135,7 +139,6 @@ const SignUp = () => {
               label="Accept Every Term And Condition"
             />
           </Form.Group>
-          <p className="text-danger fw-bold">{siteError}</p>
           <p className="text-danger fw-bold">{error?.message}</p>
           <p className="text-danger fw-bold">{googleError?.message}</p>
           <p className="text-center">
@@ -144,6 +147,7 @@ const SignUp = () => {
               Login
             </Link>
           </p>
+          <ToastContainer position="top-center" />
           <Button
             className={`${!chacked && "disabled"} shadow-none w-100 py-2`}
             variant="primary"
