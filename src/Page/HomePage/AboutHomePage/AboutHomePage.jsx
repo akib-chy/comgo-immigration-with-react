@@ -9,7 +9,12 @@ const AboutHomePage = () => {
       <div className="row">
         <div className="col-md-12 col-lg-6">
           <p className="text-orange ">ABOUT US</p>
-          <h1 className="fw-bold about-title mb-4">
+          <h1
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+            className="fw-bold about-title mb-4"
+          >
             We Provide Solution To All Migration & Visa Matters
           </h1>
           <div>
@@ -58,10 +63,24 @@ const AboutHomePage = () => {
         </div>
         <div className="col-md-12 col-lg-6">
           <div className="mb-4">
-            <img className="img-fluid rounded-3" src={aboutImg1} alt="" />
+            <img
+              data-aos="fade-up"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+              className="img-fluid rounded-3"
+              src={aboutImg1}
+              alt=""
+            />
           </div>
           <div>
-            <img className="img-fluid rounded-3" src={aboutImg2} alt="" />
+            <img
+              data-aos="fade-up"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+              className="img-fluid rounded-3"
+              src={aboutImg2}
+              alt=""
+            />
           </div>
         </div>
       </div>

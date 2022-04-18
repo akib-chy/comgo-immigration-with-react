@@ -13,11 +13,28 @@ const HomePage = () => {
         <div className="container d-flex align-items-canter ">
           <div className="mt-5 pt-5 pb-5">
             <p className="text-orange">TRAVELS IMMIGRATION & VISA</p>
-            <h1 className="fw-bold home-title text-light m-0">
+            <h1
+              className="fw-bold home-title text-light m-0 "
+              data-aos="zoom-out-down"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1500"
+            >
               The Best Way To
             </h1>
-            <h1 className="fw-bold home-title text-light m-0">Success Your</h1>
-            <h1 className="fw-bold home-title text-light">
+            <h1
+              data-aos="zoom-out-down"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1500"
+              className="fw-bold home-title text-light m-0"
+            >
+              Success Your
+            </h1>
+            <h1
+              data-aos="zoom-out-down"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1500"
+              className="fw-bold home-title text-light"
+            >
               Migration And Visa{" "}
             </h1>
             <div className="mt-5">

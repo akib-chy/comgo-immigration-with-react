@@ -6,11 +6,30 @@ const WorkHomePage = () => {
     <div className="container mt-5 pt-5">
       <div className="text-center ">
         <p className="text-orange">HOW WE WORK</p>
-        <h2 className="fw-bold workHome-title">Bold Approaches Expert</h2>
-        <h2 className="fw-bold workHome-title">Counsel Results That Matter</h2>
+        <h2
+          data-aos="zoom-out-down"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+          className="fw-bold workHome-title"
+        >
+          Bold Approaches Expert
+        </h2>
+        <h2
+          data-aos="zoom-out-down"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+          className="fw-bold workHome-title"
+        >
+          Counsel Results That Matter
+        </h2>
       </div>
       <div className="row mt-5  pt-5">
-        <div className="col-lg-3 col-md-6 col-sm-12 info">
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+          className="col-lg-3 col-md-6 col-sm-12 info"
+        >
           <h4 className="mt-4">
             <span className="workHome-into-number mt-3">01</span>
           </h4>
@@ -31,7 +50,12 @@ const WorkHomePage = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-12 info">
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1200"
+          className="col-lg-3 col-md-6 col-sm-12 info"
+        >
           <h4 className="mt-4">
             <span className="workHome-into-number ">02</span>
           </h4>
@@ -52,7 +76,12 @@ const WorkHomePage = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-12 info">
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1400"
+          className="col-lg-3 col-md-6 col-sm-12 info"
+        >
           <h4 className="mt-4">
             <span className="workHome-into-number">03</span>
           </h4>
@@ -73,7 +102,12 @@ const WorkHomePage = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-sm-12 info">
+        <div
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1600"
+          className="col-lg-3 col-md-6 col-sm-12 info"
+        >
           <h4 className="mt-4">
             <span className="workHome-into-number">04</span>
           </h4>

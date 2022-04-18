@@ -15,10 +15,20 @@ const VisaHomePage = () => {
       <div className="container ">
         <div className="text-center ">
           <p className="text-orange">HOW WE WORK</p>
-          <h2 className="fw-bold workHome-title text-light">
+          <h2
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1200"
+            className="fw-bold workHome-title text-light"
+          >
             Bold Approaches Expert
           </h2>
-          <h2 className="fw-bold workHome-title text-light">
+          <h2
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1200"
+            className="fw-bold workHome-title text-light"
+          >
             Counsel Results That Matter
           </h2>
         </div>

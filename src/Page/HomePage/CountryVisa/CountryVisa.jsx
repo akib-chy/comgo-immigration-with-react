@@ -16,8 +16,20 @@ const CountryVisa = () => {
           <div className="col-md-9">
             <p className="text-orange">Our Services</p>
             <div className="countryVisa-title">
-              <h2>The Most Favourite Country</h2>
-              <h2>For The Immigration</h2>
+              <h2
+                data-aos="fade-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1200"
+              >
+                The Most Favourite Country
+              </h2>
+              <h2
+                data-aos="fade-down"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1200"
+              >
+                For The Immigration
+              </h2>
               <p className="mt-4">
                 We Have Visa For All Countries. You Can Choose The Visa Of Your
                 Choice And Visit Country.

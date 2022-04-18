@@ -8,10 +8,20 @@ const GetInTouchHomePage = () => {
         <div className="container d-flex align-items-canter ">
           <div className="mt-5 pt-5 pb-5">
             <p className="text-orange">GET IN TOUCH WITH US</p>
-            <h1 className="fw-bold getIntouch-title text-light m-0">
+            <h1
+              data-aos="fade-down"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1200"
+              className="fw-bold getIntouch-title text-light m-0"
+            >
               Looking For The Best Visa
             </h1>
-            <h1 className="fw-bold getIntouch-title text-light m-0">
+            <h1
+              data-aos="fade-down"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1200"
+              className="fw-bold getIntouch-title text-light m-0"
+            >
               Consulting?
             </h1>
             <div className="mt-5">

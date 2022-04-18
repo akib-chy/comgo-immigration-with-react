@@ -8,7 +8,12 @@ const SingleCountryVisa = ({ countryVisa }) => {
     window.scrollTo(0, 0);
   };
   return (
-    <div className="col-lg-4 col-md-6 col-sm-12 mt-5 pt-3">
+    <div
+      data-aos="fade-up-right"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1200"
+      className="col-lg-4 col-md-6 col-sm-12 mt-5 pt-3"
+    >
       <img className="img-fluid rounded-3" src={img} alt="" />
       <div className="countryVisa-info-title">
         <h3>{name}</h3>
@@ -18,7 +23,12 @@ const SingleCountryVisa = ({ countryVisa }) => {
             ? description.slice(0, 190) + " ...Read More"
             : description}
         </p>
-        <div className="country-book-btn text-center">
+        <div
+          data-aos="fade-up"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+          className="country-book-btn text-center"
+        >
           <Link to="/shipping">
             <button
               onClick={handleScrollTop}
