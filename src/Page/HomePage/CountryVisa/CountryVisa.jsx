@@ -3,18 +3,18 @@ import "./CountryVisa.css";
 import SingleCountryVisa from "./SingleCountryVisa/SingleCountryVisa";
 
 const CountryVisa = () => {
-  const [countryesVisa, setCountryesVisa] = useState();
+  const [countriesVisa, setCountriesVisa] = useState();
   useEffect(() => {
     fetch("CountryVisa.json")
       .then((res) => res.json())
-      .then((data) => setCountryesVisa(data));
+      .then((data) => setCountriesVisa(data));
   }, []);
   return (
     <div className="mt-5 pt-5 mb-5 pb-5">
       <div className="container">
         <div className="row">
           <div className="col-md-9">
-            <p className="text-orange">FAVOURITE DESTINATION</p>
+            <p className="text-orange">Our Services</p>
             <div className="countryVisa-title">
               <h2>The Most Favourite Country</h2>
               <h2>For The Immigration</h2>
@@ -34,7 +34,7 @@ const CountryVisa = () => {
           </div>
         </div>
         <div className="row mt-5 pt-2">
-          {countryesVisa?.map((countryVisa) => (
+          {countriesVisa?.map((countryVisa) => (
             <SingleCountryVisa key={countryVisa.id} countryVisa={countryVisa} />
           ))}
         </div>

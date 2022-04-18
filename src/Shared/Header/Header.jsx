@@ -24,14 +24,14 @@ const Header = () => {
       variant="dark"
     >
       <Container>
-        <Navbar.Brand as={Link} to="/home">
+        <Navbar.Brand onclick={handleScrollTop} as={Link} to="/home">
           <img className="img-fluid" width="170px" src={logo} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav ">
           <Nav className="ms-auto mt-2">
             <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/home">
-              Homepage
+              Home
             </Nav.Link>
 
             <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/about">

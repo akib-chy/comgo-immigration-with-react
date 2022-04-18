@@ -111,7 +111,7 @@ const Login = () => {
           </Form.Group>
           <p className="text-danger fw-bold">{siteError}</p>
           <p className="text-danger fw-bold">{error?.message}</p>
-          <p className="text-danger fw-bold">{googleError}</p>
+          <p className="text-danger fw-bold">{googleError?.message}</p>
           <button
             onClick={handlePasswordResat}
             className="btn btn-link shadow-none"

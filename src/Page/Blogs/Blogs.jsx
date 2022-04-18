@@ -8,19 +8,41 @@ const Blogs = () => {
         <h1 className="question-title">Question Part</h1>
         <div className="question-part">
           <div>
-            <h2>What is Context API?</h2>
-            <p>
-              The React Context API is a way for a React app to effectively
-              produce global variables that can be passed around. This is the
-              alternative to "prop drilling" or moving props from grandparent to
-              child to parent, and so on. Context is also touted as an easier,
-              lighter approach to state management using Redux.
-            </p>
+            <h2>Authentication vs. Authorization</h2>
+            <div className="row">
+              <div className="col-md-6 border border-warning">
+                <h4 className="text-center text-success border-bottom py-2 border-warning">
+                  Authentication
+                </h4>
+                <li>
+                  In authentication process, the identity of users are checked
+                  for providing the access to the system.
+                </li>
+                <li>
+                  {" "}
+                  In authentication process, users or persons are verified.
+                </li>
+                <li> It is done before the authorization process.</li>
+              </div>
+              <div className="col-md-6 border border-warning">
+                <h4 className="text-center text-success py-2 border-bottom border-warning">
+                  Authorization
+                </h4>
+                <li>
+                  While in authorization process, person’s or user’s authorities
+                  are checked for accessing the resources.
+                </li>
+                <li>While in this process, users or persons are validated.</li>
+                <li>
+                  While this process is done after the authentication process.
+                </li>
+              </div>
+            </div>
           </div>
           <div className="right-part">
             <img
-              className="question-img"
-              src="https://www.carlrippon.com/static/0d1f722d0fe4c2bc4c3d71595dbe67dd/ca682/prop-drilling-v-context.png"
+              className="question-img rounded-3"
+              src="https://media.geeksforgeeks.org/wp-content/uploads/20190606141632/Untitled-Diagram-2019-06-06T141540.818.png"
               alt=""
             />
           </div>
@@ -28,39 +50,37 @@ const Blogs = () => {
         <div className="question-part part-2">
           <div>
             <img
-              className="question-img"
-              src="https://pbs.twimg.com/media/FD7gFAOVIAchAe2.jpg"
+              className="question-img rounded-3"
+              src="https://www.nbnminds.com/wp-content/uploads/2019/03/is-Firebase-right-for-my-app.png"
               alt=""
             />
           </div>
           <div className="right-part">
-            <h2>What Is Semantic Element ?</h2>
+            <h2>Why are you using firebase ? </h2>
             <p>
-              Semantic tags clearly define the purpose of the HTML element. It
-              also describes the type of content that the element should
-              contain.
-              <br />
-              For example, "header", "footer", "article" are considered semantic
-              elements as they clearly describe their purpose and the type of
-              content they should enclose.
+              We're still learning to work with the latest Firebase. And I use
+              Firebase because it's very easy to do user related work with
+              Firebase and Firebase is very popular nowadays.
             </p>
           </div>
         </div>
         <div className="question-part">
           <div>
-            <h2>What is Context API?</h2>
+            <h2>
+              What other services does firebase provide other than
+              authentication ?
+            </h2>
             <p>
-              The React Context API is a way for a React app to effectively
-              produce global variables that can be passed around. This is the
-              alternative to "prop drilling" or moving props from grandparent to
-              child to parent, and so on. Context is also touted as an easier,
-              lighter approach to state management using Redux.
+              In addition to Firebase authentication, the Firebase database
+              contains databases where data can be stored. And Firebase hosting
+              includes Firebase storagestorage and Firebase maching larning and
+              ect
             </p>
           </div>
           <div className="right-part">
             <img
               className="question-img"
-              src="https://www.carlrippon.com/static/0d1f722d0fe4c2bc4c3d71595dbe67dd/ca682/prop-drilling-v-context.png"
+              src="https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/s1600/image00.png"
               alt=""
             />
           </div>
