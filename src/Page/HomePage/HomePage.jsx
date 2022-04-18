@@ -60,6 +60,7 @@ const HomePage = () => {
       <VisaHomePage />
       <CountryVisa />
       <Testimonial />
+
       <GetInTouchHomePage />
     </div>
   );

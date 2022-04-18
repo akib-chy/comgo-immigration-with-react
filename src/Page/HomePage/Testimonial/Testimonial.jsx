@@ -26,7 +26,7 @@ const Testimonial = () => {
       <div className="row py-5">
         <div
           className="col-lg-4 "
-          data-aos="zoom-out-left"
+          data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
         >
@@ -66,7 +66,7 @@ const Testimonial = () => {
         </div>
         <div
           className="col-lg-4"
-          data-aos="zoom-out-left"
+          data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1300"
         >
@@ -105,8 +105,8 @@ const Testimonial = () => {
           </div>
         </div>
         <div
-          className="col-lg-4"
-          data-aos="zoom-out-left"
+          className="col-lg-4 col-md-8 col-sm-12"
+          data-aos="flip-right"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1600"
         >
