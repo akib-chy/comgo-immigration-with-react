@@ -16,6 +16,7 @@ const SignUp = () => {
   const [pass, setPass] = useState("");
   const [confPass, setConfPass] = useState("");
   const navigate = useNavigate();
+  const [chacked, setChacked] = useState(false);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile] = useUpdateProfile(auth);
@@ -60,6 +61,9 @@ const SignUp = () => {
   };
   const handleGoogleLogin = () => {
     signInWithGoogle();
+  };
+  const handleAcceptCondition = (event) => {
+    setChacked(event.target.checked);
   };
   return (
     <div className="container">
@@ -118,6 +122,19 @@ const SignUp = () => {
               Please provide a valid Password.
             </Form.Control.Feedback>
           </Form.Group>
+          <Form.Group
+            className="mb-3 shadow-none"
+            controlId="formBasicCheckbox"
+          >
+            <Form.Check
+              className={`${!chacked && "text-danger"} ${
+                chacked && "text-success"
+              }`}
+              onClick={handleAcceptCondition}
+              type="checkbox"
+              label="Accept Every Term And Condition"
+            />
+          </Form.Group>
           <p className="text-danger fw-bold">{siteError}</p>
           <p className="text-danger fw-bold">{error?.message}</p>
           <p className="text-danger fw-bold">{googleError?.message}</p>
@@ -128,7 +145,7 @@ const SignUp = () => {
             </Link>
           </p>
           <Button
-            className="shadow-none w-100 py-2"
+            className={`${!chacked && "disabled"} shadow-none w-100 py-2`}
             variant="primary"
             type="submit"
           >

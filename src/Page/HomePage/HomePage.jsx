@@ -5,6 +5,7 @@ import VisaHomePage from "./VisaHomePage/VisaHomePage";
 import WorkHomePage from "./WorkHomePage/WorkHomePage";
 import CountryVisa from "./CountryVisa/CountryVisa";
 import GetInTouchHomePage from "./GetInTouchHomePage/GetInTouchHomePage";
+import Testimonial from "./Testimonial/Testimonial";
 
 const HomePage = () => {
   return (
@@ -58,6 +59,7 @@ const HomePage = () => {
       <WorkHomePage />
       <VisaHomePage />
       <CountryVisa />
+      <Testimonial />
       <GetInTouchHomePage />
     </div>
   );
