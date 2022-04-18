@@ -16,24 +16,24 @@ const HomePage = () => {
             <p className="text-orange">TRAVELS IMMIGRATION & VISA</p>
             <h1
               className="fw-bold home-title text-light m-0 "
-              data-aos="zoom-out-down"
+              data-aos="fade-down"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1500"
+              data-aos-duration="1200"
             >
               The Best Way To
             </h1>
             <h1
-              data-aos="zoom-out-down"
+              data-aos="fade-down"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1500"
+              data-aos-duration="1200"
               className="fw-bold home-title text-light m-0"
             >
               Success Your
             </h1>
             <h1
-              data-aos="zoom-out-down"
+              data-aos="fade-down"
               data-aos-easing="ease-out-cubic"
-              data-aos-duration="1500"
+              data-aos-duration="1200"
               className="fw-bold home-title text-light"
             >
               Migration And Visa{" "}

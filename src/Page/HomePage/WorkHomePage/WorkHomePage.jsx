@@ -7,7 +7,7 @@ const WorkHomePage = () => {
       <div className="text-center ">
         <p className="text-orange">HOW WE WORK</p>
         <h2
-          data-aos="zoom-out-down"
+          data-aos="fade-down"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
           className="fw-bold workHome-title"
@@ -15,7 +15,7 @@ const WorkHomePage = () => {
           Bold Approaches Expert
         </h2>
         <h2
-          data-aos="zoom-out-down"
+          data-aos="fade-down"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="1000"
           className="fw-bold workHome-title"
