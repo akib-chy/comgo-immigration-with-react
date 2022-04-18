@@ -24,8 +24,13 @@ const Testimonial = () => {
         </h2>
       </div>
       <div className="row py-5">
-        <div className="col-lg-4">
-          <div className="card-1 testimonial-card p-4">
+        <div
+          className="col-lg-4 "
+          data-aos="zoom-out-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+        >
+          <div className="card-1 testimonial-card p-4 py-5 mt-3">
             <div className="p-4">
               <span>
                 <i class="fa-solid fa-star"></i>
@@ -59,8 +64,13 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-4">
-          <div className="card-2 testimonial-card p-4">
+        <div
+          className="col-lg-4"
+          data-aos="zoom-out-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1300"
+        >
+          <div className="card-2 testimonial-card p-4 py-5 mt-3">
             <div className="p-4">
               <span>
                 <i class="fa-solid fa-star"></i>
@@ -94,8 +104,13 @@ const Testimonial = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-4">
-          <div className="card-3 testimonial-card p-4">
+        <div
+          className="col-lg-4"
+          data-aos="zoom-out-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1600"
+        >
+          <div className="card-3 testimonial-card p-4 py-5 mt-3">
             <div className="p-4">
               <span>
                 <i class="fa-solid fa-star"></i>
