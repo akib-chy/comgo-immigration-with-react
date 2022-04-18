@@ -16,13 +16,10 @@ const GetInTouchHomePage = () => {
             </h1>
             <div className="mt-5">
               <p className="mb-0 text-light">
-                Morbi tristique senectus et netus et malesuada fames ac. Nunc
-                vel risus
+                You Select The Visa Of Your Choice And Send It To Us And Let Us
+                Know If You
               </p>
-              <p className="text-light">
-                commodo viverra. Non pulvinar neque laoreet suspendisse
-                interdum.{" "}
-              </p>
+              <p className="text-light">Have A Case For Booking A Visa. </p>
             </div>
             <div className="orange-btn mt-5">
               <button className="btn  p-3 px-4 text-light shadow-none fw-bold">

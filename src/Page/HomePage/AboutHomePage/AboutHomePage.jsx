@@ -32,19 +32,21 @@ const AboutHomePage = () => {
                   <h4 className="aboutHome-info fw-bold">Accurate Guidance</h4>
                 </div>
                 <p className="about-info mb-1 ms-5 ps-4">
-                  Lorem ipsum dolor sit amet, consectetur{" "}
+                  We Do Our Best to Serve You. And We Try To{" "}
                 </p>
-                <p className="about-info ms-5 ps-4">adipiscing elit.</p>
+                <p className="about-info ms-5 ps-4">
+                  Meet Customer Expectations.
+                </p>
               </div>
               <div className="mt-2">
                 <div className="d-flex align-items-center">
                   <i className="fa-solid fa-thumbs-up aboutHome-icon"></i>
-                  <h4 className="aboutHome-info fw-bold">Accurate Guidance</h4>
+                  <h4 className="aboutHome-info fw-bold">Our Presence</h4>
                 </div>
                 <p className="about-info mb-1 ms-5 ps-4">
-                  Lorem ipsum dolor sit amet, consectetur{" "}
+                  We Are Trying To Gradually InterGrate All{" "}
                 </p>
-                <p className="about-info ms-5 ps-4">adipiscing elit.</p>
+                <p className="about-info ms-5 ps-4">Countries in The Visa.</p>
               </div>
               <div className="orange-btn mt-5">
                 <button className="btn orange-btn p-3 px-4 text-light shadow-none fw-bold mb-4">

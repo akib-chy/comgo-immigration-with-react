@@ -113,7 +113,7 @@ const Shipping = () => {
             variant="primary"
             type="submit"
           >
-            Sign Up
+            Add Shipping
           </Button>
         </Form>
       </div>

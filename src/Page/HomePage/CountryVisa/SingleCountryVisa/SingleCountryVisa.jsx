@@ -4,6 +4,9 @@ import "./SingleCountryVisa.css";
 
 const SingleCountryVisa = ({ countryVisa }) => {
   const { name, img, price, description } = countryVisa;
+  const handleScrollTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="col-lg-4 col-md-6 col-sm-12 mt-5 pt-3">
       <img className="img-fluid rounded-3" src={img} alt="" />
@@ -17,7 +20,10 @@ const SingleCountryVisa = ({ countryVisa }) => {
         </p>
         <div className="country-book-btn text-center">
           <Link to="/shipping">
-            <button className="btn btn-link text-decoration-none shadow-none">
+            <button
+              onClick={handleScrollTop}
+              className="btn btn-link text-decoration-none shadow-none"
+            >
               Book Now
             </button>
           </Link>

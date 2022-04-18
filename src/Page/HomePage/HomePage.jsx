@@ -22,12 +22,11 @@ const HomePage = () => {
             </h1>
             <div className="mt-5">
               <p className="mb-0 text-light">
-                Morbi tristique senectus et netus et malesuada fames ac. Nunc
-                vel risus
+                Welcome TO Our Combo | Immigration Visa Website.We Have All Type
+                Of Visa.
               </p>
               <p className="text-light">
-                commodo viverra. Non pulvinar neque laoreet suspendisse
-                interdum.{" "}
+                You Can Chose The Visa Of Your Chhoice From Our Website.{" "}
               </p>
             </div>
             <div className="orange-btn mt-5">

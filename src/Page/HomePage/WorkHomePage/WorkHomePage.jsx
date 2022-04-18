@@ -25,8 +25,8 @@ const WorkHomePage = () => {
               </div>
             </div>
             <div className="workAbout-info mt-4">
-              <p>Sed ut perspiciatis unde</p>
-              <p>omnis iste natus error</p>
+              <p>Please Fill In The Form</p>
+              <p>And Submit From Us</p>
               <p>sit voluptatem</p>
             </div>
           </div>
@@ -67,8 +67,8 @@ const WorkHomePage = () => {
               </div>
             </div>
             <div className="workAbout-info mt-4">
-              <p>Sed ut perspiciatis unde</p>
-              <p>omnis iste natus error</p>
+              <p>Make Payment For Your visa</p>
+              <p>We Accept Request</p>
               <p>sit voluptatem</p>
             </div>
           </div>
@@ -88,8 +88,8 @@ const WorkHomePage = () => {
               </div>
             </div>
             <div className="workAbout-info mt-4">
-              <p>Sed ut perspiciatis unde</p>
-              <p>omnis iste natus error</p>
+              <p>Ready To Receive Your Visa</p>
+              <p>And Visit Country</p>
               <p>sit voluptatem</p>
             </div>
           </div>

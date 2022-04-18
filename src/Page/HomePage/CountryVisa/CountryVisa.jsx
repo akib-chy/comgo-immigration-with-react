@@ -19,10 +19,10 @@ const CountryVisa = () => {
               <h2>The Most Favourite Country</h2>
               <h2>For The Immigration</h2>
               <p className="mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor
+                We Have Visa For All Countries. You Can Choose The Visa Of Your
+                Choice And Visit Country.
               </p>
-              <p>incididunt ut labore et dolore magna aliqua.</p>
+              <p>Below Are The Names Of Some Popular Countries</p>
             </div>
           </div>
           <div className="col-md-3">

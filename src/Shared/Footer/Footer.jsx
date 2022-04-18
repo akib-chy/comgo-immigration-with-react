@@ -12,7 +12,7 @@ const Footer = () => {
           <img className="img-fluid" src={logo} alt="" />
           <div className="text-light">
             <p className="mb-1 mt-4">
-              Duis dictum vestibulum ante vitae ullamcorper. Phasellus
+              Thanks You So Much For Visiting Combo Immigration VisA Website
             </p>
             <p>ullamcorper odio vitae eleifend ultricies lectus</p>
             <div className="footer-icons mt-5 ">
@@ -89,7 +89,7 @@ const Footer = () => {
           <div className="col-lg-4 mt-5">
             <h4 className="text-light fw-bold">Subscribe Our Newslatter</h4>
             <div>
-              <p className="mb-1">Lorem ipsum dolor sit amet,</p>
+              <p className="mb-1">Please Subscribe Our Newslatter,</p>
               <p>consectetur adipiscing elit. </p>
               <div className="footer-form">
                 <input type="email" placeholder="Your Email" />
@@ -101,7 +101,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center  mt-5 mb-0 pb-4 footer-copyright ">
+      <p className="text-center  mt-1 mb-0 pb-4 footer-copyright ">
         Copyright &copy; {year} Combo Immigration | Designg-By :{" "}
         <a href="https://www.facebook.com/Minhajul69" target="_blank">
           AKIB
