@@ -24,7 +24,7 @@ const Header = () => {
       variant="dark"
     >
       <Container>
-        <Navbar.Brand onclick={handleScrollTop} as={Link} to="/home">
+        <Navbar.Brand onClick={handleScrollTop} as={Link} to="/home">
           <img className="img-fluid" width="170px" src={logo} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

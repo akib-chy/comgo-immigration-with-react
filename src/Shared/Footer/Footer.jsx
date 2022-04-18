@@ -12,7 +12,7 @@ const Footer = () => {
           <img className="img-fluid" src={logo} alt="" />
           <div className="text-light">
             <p className="mb-1 mt-4">
-              Thanks You So Much For Visiting Combo Immigration VisA Website
+              Thanks You So Much For Visiting Cogbo Immigration VisA Website
             </p>
             <p>ullamcorper odio vitae eleifend ultricies lectus</p>
             <div className="footer-icons mt-5 ">
@@ -77,13 +77,17 @@ const Footer = () => {
               <span>
                 <i className="fa-solid fa-phone"></i>
               </span>
-              <p>+62 820 1212 5050</p>
+              <p>
+                <a href="tel:62 820 1212 5050">+62 820 1212 5050</a>
+              </p>
             </div>
             <div className="text-light d-flex align-items-center">
               <span>
                 <i className="fa-solid fa-envelope"></i>
               </span>
-              <p>comgo@example.com</p>
+              <p className="mt-2">
+                <a href="mailto:comgo@example.com">comgo@example.com</a>
+              </p>
             </div>
           </div>
           <div className="col-lg-4 mt-5">

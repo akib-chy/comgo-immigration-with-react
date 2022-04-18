@@ -33,19 +33,19 @@ const Testimonial = () => {
           <div className="card-1 testimonial-card p-4 py-5 mt-3">
             <div className="p-4">
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
             </div>
             <div className="px-4">
@@ -73,19 +73,19 @@ const Testimonial = () => {
           <div className="card-2 testimonial-card p-4 py-5 mt-3">
             <div className="p-4">
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
             </div>
             <div className="px-4">
@@ -113,19 +113,19 @@ const Testimonial = () => {
           <div className="card-3 testimonial-card p-4 py-5 mt-3">
             <div className="p-4">
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
               <span>
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
               </span>
             </div>
             <div className="px-4">

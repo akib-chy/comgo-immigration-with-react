@@ -40,7 +40,7 @@ const HomePage = () => {
             </h1>
             <div className="mt-5">
               <p className="mb-0 text-light">
-                Welcome TO Our Combo | Immigration Visa Website.We Have All Type
+                Welcome TO Our Comgo | Immigration Visa Website.We Have All Type
                 Of Visa.
               </p>
               <p className="text-light">
