@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
@@ -8,16 +8,18 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import googleLogo from "../../images/google.svg";
+import Spiner from "../../Shared/Spiner/Spiner";
 
 const SignUp = () => {
   const [validated, setValidated] = useState(false);
   const [siteError, setSiteError] = useState("");
   const [pass, setPass] = useState("");
   const [confPass, setConfPass] = useState("");
+  const navigate = useNavigate();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile] = useUpdateProfile(auth);
-  const [signInWithGoogle, googleLoading, googleError] =
+  const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
   const handlePassBlur = (event) => {
     setPass(event.target.value);
@@ -25,7 +27,12 @@ const SignUp = () => {
   const handleConfPassBlur = (event) => {
     setConfPass(event.target.value);
   };
-
+  if (loading || googleLoading) {
+    return <Spiner />;
+  }
+  if (user || googleUser) {
+    navigate("/home");
+  }
   const handleSubmit = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;

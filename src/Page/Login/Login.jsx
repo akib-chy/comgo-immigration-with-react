@@ -4,12 +4,14 @@ import {
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+
 import { sendPasswordResetEmail } from "firebase/auth";
 import googleLogo from "../../images/google.svg";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Spiner from "../../Shared/Spiner/Spiner";
+// import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [validated, setValidated] = useState(false);
@@ -17,11 +19,20 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  const [signInWithGoogle, googleLoading, googleError] =
+  const [signInWithGoogle, googleUsers, googleLoading, googleError] =
     useSignInWithGoogle(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const handleEmailBlur = (e) => {
     setEmail(e.target.value);
   };
+  if (loading || googleLoading) {
+    return <Spiner />;
+  }
+  if (user || googleUsers) {
+    navigate(from, { replace: true });
+  }
   const handleSubmit = (event) => {
     event.preventDefault();
     // const email = event.target.email.value;
@@ -66,7 +77,6 @@ const Login = () => {
   const handleGoogleLogin = () => {
     signInWithGoogle();
   };
-  console.log(googleError.message);
   return (
     <div className="container">
       <div className="shadow w-50 mx-auto p-5 my-5">
