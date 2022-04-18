@@ -11,7 +11,7 @@ import { sendPasswordResetEmail } from "firebase/auth";
 import googleLogo from "../../images/google.svg";
 import { ToastContainer, toast } from "react-toastify";
 import Spiner from "../../Shared/Spiner/Spiner";
-// import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [validated, setValidated] = useState(false);

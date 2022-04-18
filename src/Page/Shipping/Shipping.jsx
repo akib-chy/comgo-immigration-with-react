@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../firebase.init";
+import "react-toastify/dist/ReactToastify.css";
 
 const Shipping = () => {
   const [validated, setValidated] = useState(false);
   const [siteError, setSiteError] = useState("");
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
-  //   if (user || googleUser) {
-  //     navigate("/home");
-  //   }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const address = event.target.address.value;
     const telNum = event.target.telNum.value;
     console.log(name, address, telNum);
-    // const name = event.target.name.value;
 
     if (!name || !address || !telNum) {
       setSiteError("Please Fill In The Input Field");
@@ -31,7 +30,18 @@ const Shipping = () => {
       event.stopPropagation();
       return;
     }
-    navigate("/inventory");
+    toast.success("Booking SuccessFull Thanks For Booking Visa", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    setTimeout(() => {
+      navigate("/inventory");
+    }, 2000);
     setSiteError("");
     setValidated(true);
   };
@@ -86,6 +96,17 @@ const Shipping = () => {
               Please provide Tour Phone Number
             </Form.Control.Feedback>
           </Form.Group>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
           <p className="text-danger fw-bold">{siteError}</p>
           <Button
             className="shadow-none w-100 py-2"

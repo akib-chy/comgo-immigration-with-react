@@ -9,9 +9,12 @@ import "./Header.css";
 import { signOut } from "firebase/auth";
 
 const Header = () => {
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const handleLogOut = () => {
     signOut(auth);
+  };
+  const handleScrollTop = () => {
+    window.scrollTo(0, 0);
   };
   return (
     <Navbar
@@ -27,20 +30,20 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav ">
           <Nav className="ms-auto mt-2">
-            <Nav.Link as={CustomLink} to="/home">
+            <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/home">
               Homepage
             </Nav.Link>
 
-            <Nav.Link as={CustomLink} to="/about">
+            <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/about">
               About
             </Nav.Link>
-            <Nav.Link as={CustomLink} to="/ashdf">
+            <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/ashdf">
               Visa
             </Nav.Link>
-            <Nav.Link as={CustomLink} to="/blogs">
+            <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/blogs">
               Blogs
             </Nav.Link>
-            <Nav.Link as={CustomLink} to="/inventory">
+            <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/inventory">
               Inventory
             </Nav.Link>
             {user ? (
@@ -51,7 +54,7 @@ const Header = () => {
                 Log Out
               </button>
             ) : (
-              <Nav.Link as={CustomLink} to="/login">
+              <Nav.Link onClick={handleScrollTop} as={CustomLink} to="/login">
                 LogIn
               </Nav.Link>
             )}
