@@ -11,6 +11,7 @@ import SignUp from "./Page/SignUp/SignUp";
 import "react-toastify/dist/ReactToastify.css";
 import Inventory from "./Page/Inventory/Inventory";
 import RequireAuth from "./Page/RequireAuth/RequuireAuth";
+import Shipping from "./Page/Shipping/Shipping";
 
 function App() {
   return (
@@ -21,6 +22,14 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route
+          path="/shipping"
+          element={
+            <RequireAuth>
+              <Shipping />
+            </RequireAuth>
+          }
+        />
         <Route
           path="/inventory"
           element={

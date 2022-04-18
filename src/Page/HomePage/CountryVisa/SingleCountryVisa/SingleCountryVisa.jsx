@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SingleCountryVisa.css";
 
 const SingleCountryVisa = ({ countryVisa }) => {
@@ -15,9 +16,11 @@ const SingleCountryVisa = ({ countryVisa }) => {
             : description}
         </p>
         <div className="country-book-btn text-center">
-          <button className="btn btn-link text-decoration-none shadow-none">
-            Book Now
-          </button>
+          <Link to="/shipping">
+            <button className="btn btn-link text-decoration-none shadow-none">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
