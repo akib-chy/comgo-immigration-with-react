@@ -47,7 +47,7 @@ const Shipping = () => {
   };
   return (
     <div className="container">
-      <div className="shadow w-50 mx-auto p-5 my-5">
+      <div className="shadow form-container mx-auto p-5 my-5">
         <h3 className="text-primary text-center fw-bold mb-3">
           Shipping Information
         </h3>
